@@ -1,0 +1,884 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< general page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  body{
+    position: relative;
+    min-height: 100vh;
+  }
+/*short videos*/
+  .wp-short-video-container{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #262b36;
+    top: 60px;
+  }
+
+  .wp-short-video-header{
+    width: 93%;
+    margin: 10px auto 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .wp-short-video-label, .wp-short-video-label a{
+    text-decoration: none;
+    color: #ccc;
+  }
+
+  .wp-short-video-label span i{
+    position: relative;
+    top: 1px;
+    margin-right: 3px;
+  }
+
+  .wp-short-video-nav{
+    cursor: default;
+    position: relative;
+    color: #bfbfbf;
+  }
+
+  .wp-short-video-nav span{
+    font-size: 20px;
+    padding: 0 1px;
+    margin: 0 4px;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+  }
+
+  .wp-short-video-nav span:hover{
+    color: #bfbfbf;
+  }
+
+  .wp-short-video-detail-container{
+    position: relative;
+    width: 93%;
+    height: 5.625em;
+    margin: 0 auto 10px;
+    overflow: hidden;
+  }
+
+  .wp-short-video-detail .swiper-slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    background: #262b36;
+    color: white;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .wp-short-video-detail .swiper-slide a,
+  .wp-see-all-short-video a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .wp-short-video-detail .swiper-slide span{
+    display: inline-block;
+  }
+
+  .short-video-detail-image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .short-video-detail-image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.1s ease-out;
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -ms-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+  }
+
+  .short-video-detail-image::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 27px;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.1s ease-out;
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -ms-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+  }
+
+  .wp-short-video-detail .swiper-slide:hover .short-video-detail-image::before,
+  .wp-short-video-detail .swiper-slide:hover .short-video-detail-image::after{
+    opacity: 0;
+  }
+
+  .short-video-detail-image img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .wp-see-all-short-video{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, #262b36 50%, #181a20 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #more-short-video{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    box-shadow: 0 0 5px #161616;
+  }
+
+  #more-short-video i,
+  .wp-general-buttons a span i{
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+  }
+
+  #more-short-video:hover i{
+    color: #00ced1;
+  }
+  /*end of short videos*/
+/*movie and series*/
+  .wp-general-container{
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 293px);
+    padding: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .wp-general-container.wp-movie-container{
+    min-height: calc(100vh - 184px);
+  }
+
+  .wp-general-header{
+    width: 93%;
+    margin: 0 auto;
+  }
+
+  .wp-general-header i{
+    margin-right: 1px;
+  }
+
+  .wp-general-header span{
+    color: #ccc;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .wp-general-header span a{
+    color: white;
+    text-decoration: none;
+    color: #ccc;
+  }
+
+  .wp-general-details-container{
+    width: 298px;
+    margin: 10px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .wp-detail-container{
+    width: 119px;
+    height: auto;
+    padding: 7px 7px 5px 7px;
+    margin: 10px 15px 15px;
+    background-color: #262b36;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .wp-detail-container a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .wp-detail-container a:hover #general-label{
+    color: #00ced1;
+  }
+
+  .wp-general-detail-image{
+    width: 105px;
+    height: 130px;
+  }
+
+  .wp-short-video-detail-image{
+    width: 105px;
+    height: 90px;
+  }
+
+  .wp-general-detail-image img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .wp-general-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #general-label{
+    font-size: 13px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+  }
+
+  .general-rating-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+  }
+
+  .general-rating-container span{
+    display: inline-block;
+  }
+
+  #general-rating{
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #afafaf;
+  }
+
+  #general-rating i{
+    margin-right: 3px;
+    color: #f5c518;
+  }
+
+  .wp-general-buttons{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(42px);
+    width: 6em;
+    padding-bottom: 10px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .wp-general-buttons a{
+    text-decoration: none;
+    color: #bfbfbf;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+  }
+
+  .wp-general-buttons a:hover{
+    color: #bfbfbf;
+  }
+
+  .wp-general-buttons .not-active{
+    color: #4f4f4f;
+    pointer-events: none;
+  }
+
+  .wp-general-buttons a span{
+    position: relative;
+    bottom: 0;
+    transform: translateY(35px);
+    -webkit-transform: translateY(35px);
+    -moz-transform: translateY(35px);
+    -o-transform: translateY(35px);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0;
+    background-color: transparent;
+    border: 2px solid #bfbfbf;
+    transition: border-color 0.1s ease, transform 0.2s ease, opacity 0.2s ease;
+    -webkit-transition: border-color 0.1s ease, transform 0.2s ease, opacity 0.2s ease;
+    -moz-transition: border-color 0.1s ease, transform 0.2s ease, opacity 0.2s ease;
+    -ms-transition: border-color 0.1s ease, transform 0.2s ease, opacity 0.2s ease;
+    -o-transition: border-color 0.1s ease, transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .wp-general-buttons a:nth-child(2) span{
+    transition: border-color 0.1s ease, transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease;
+    -webkit-transition: border-color 0.1s ease, transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease;
+    -moz-transition: border-color 0.1s ease, transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease;
+    -ms-transition: border-color 0.1s ease, transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease;
+    -o-transition: border-color 0.1s ease, transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease;
+  }
+
+  .wp-general-buttons a span.show-button{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
+
+  .wp-general-buttons a:hover span{
+    border-color: #bfbfbf;
+  }
+
+  .wp-general-buttons .not-active span{
+    border: 2px solid #4f4f4f;
+  }
+
+  .wp-general-buttons a span i{
+    font-size: 18px;
+  }
+  /*end of movie and series*/
+  /*--------------------------- end of general page ---------------------------*/
+/*series related video*/
+  .series-related-video-container, .movie-related-video-container{
+    position: relative;
+    width: 100vw;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .series-related-video-header, .series-related-video-details-container,
+  .movie-related-video-header, .movie-related-video-details-container{
+    width: 93%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .series-related-video-details-container a,
+  .movie-related-video-details-container a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .series-related-video-header,
+  .movie-related-video-header{
+    margin: 0 auto 13px;
+  }
+
+  .related-label{
+    color: #ccc;
+  }
+
+  .series-related-video-nav,
+  .movie-related-video-nav{
+    cursor: default;
+    font-size: 18px;
+  }
+
+  .series-related-video-nav span,
+  .movie-related-video-nav span{
+    padding: 0 1px;
+    margin: 0 4px;
+    color: #bfbfbf;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+  }
+
+  .series-related-video-nav span:hover,
+  .movie-related-video-nav span:hover{
+    color: #bfbfbf;
+  }
+
+  .series-related-details-container,
+  .movie-related-details-container{
+    width: 100%;
+    height: auto;
+    background-color: #262b36;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .series-related-image,
+  .movie-related-image{
+    width: 100%;
+    height: 7.4em;
+  }
+
+  .short-video-related-image{
+    width: 100%;
+    height: 5em;
+  }
+
+  .series-related-image img,
+  .movie-related-image img,
+  .short-video-related-image img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .series-related-details,
+  .movie-related-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+  }
+
+  .series-related-details-rating,
+  .movie-related-details-rating{
+    width: 100%;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #series-related-details-label,
+  #movie-related-details-label{
+    font-size: 12px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+  }
+
+  .series-related-video-details-container a:hover #series-related-details-label,
+  .movie-related-video-details-container a:hover #movie-related-details-label{
+    color: #00ced1;
+  }
+
+  #series-related-rating,
+  #movie-related-rating{
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #afafaf;
+  }
+
+  #series-related-rating i,
+  #movie-related-rating i{
+    margin-right: 3px;
+    color: #f5c518;
+  }
+
+  #series-logo{
+    position: relative;
+    top: -2px;
+  }
+
+  #series-logo img{
+    width: 13px;
+    height: 13px;
+  }
+  /*end of series related video*/
+/*video error*/
+  .video-error-container{
+    width: 100vw;
+    height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-error span{
+    display: inline-block;
+    margin: 5% 0;
+  }
+
+  #error-label{
+    color: #e6e6e6;
+    font-size: 22px;
+    margin: 17% 0 3%;
+  }
+
+  #error-back button{
+    font-family: sans-serif;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #262b36;
+  }
+
+  #error-back:hover button{
+    color: #00ced1;
+  }
+  /*end of video error*/
+/*category error*/
+  .category-error-container{
+    position: relative;
+    top: 60px;
+    width: 100vw;
+    height: calc(100vh - 132px);
+  }
+
+  .category-error{
+    width: 100%;
+    height: 50%;
+  }
+
+  #category-arrow{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 100%;
+    padding: 0 0 10px 5%;
+  }
+
+  #category-arrow svg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+  }
+
+  #show-arrow{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #181a20;
+    animation: arrow 2s;
+  }
+
+  @keyframes arrow{
+    0%{
+      height: 100%;
+    }
+    10%{
+      height: 100%;
+    }
+    90%{
+      height: 0;
+    }
+    100%{
+      height: 0;
+    }
+  }
+
+  #category-error-message{
+    display: block;
+    font-size: 20px;
+    color: #dfdfdf;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  /*end of category error*/
+
+  @media (min-width: 30em) and (max-width: 60em){
+    .wp-general-buttons{
+      transform: translateY(45px);
+    }
+
+    .wp-short-video-nav span:hover,
+    .series-related-video-nav span:hover,
+    .movie-related-video-nav span:hover,
+    .wp-general-buttons a:hover{
+      color: #bfbfbf;
+    }
+
+    .wp-general-buttons a:hover span{
+      border-color: #bfbfbf;
+    }
+
+    .wp-short-video-detail .swiper-slide:hover .short-video-detail-image::before,
+    .wp-short-video-detail .swiper-slide:hover .short-video-detail-image::after{
+      opacity: 0;
+    }
+
+    .wp-general-container{
+      padding: 10px 0 0;
+      min-height: calc(100vh - 306px);
+    }
+
+    .wp-general-container.wp-movie-container{
+      min-height: calc(100vh - 187px);
+    }
+
+    .wp-short-video-nav span{
+      font-size: 20px;
+      padding: 0 1px;
+      margin: 0 7px;
+    }
+
+    .wp-see-all-short-video{
+      height: 40px;
+    }
+
+    #more-short-video{
+      width: 32px;
+      height: 32px;
+    }
+
+    .series-related-video-nav,
+    .movie-related-video-nav{
+      font-size: 20px;
+    }
+
+    .series-related-video-nav span,
+    .movie-related-video-nav span{
+      padding: 0 1px;
+      margin: 0 7px;
+    }
+
+    .wp-general-details-container{
+      width: 604px;
+      margin: 15px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    .wp-detail-container{
+      width: 121px;
+      height: auto;
+      padding: 8px 8px 6px 8px;
+      margin: 10px 15px 15px;
+      background-color: #262b36;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    .wp-general-detail-image{
+      width: 105px;
+      height: 130px;
+    }
+
+    .series-related-image,
+    .movie-related-image{
+      width: 100%;
+      height: 8.125em;
+    }
+
+    .short-video-related-image{
+      width: 100%;
+      height: 5em;
+    }
+
+    .wp-short-video-detail-image{
+      width: 105px;
+      height: 90px;
+    }
+
+    #category-arrow{
+      width: 25%;
+      padding: 0 0 10px 2%;
+    }
+
+    .category-error-container{
+      width: 320px;
+    }
+
+    #category-error-message{
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 60em){
+    .wp-short-video-nav span,
+    .series-related-video-nav span,
+    .movie-related-video-nav span{
+      cursor: pointer;
+    }
+    
+    .wp-short-video-header,
+    .wp-short-video-detail-container,
+    .wp-general-header,
+    .series-related-video-header, .series-related-video-details-container,
+    .movie-related-video-header, .movie-related-video-details-container{
+      width: 97%;
+    }
+    
+    .wp-short-video-nav span:hover,
+    .series-related-video-nav span:hover,
+    .movie-related-video-nav span:hover,
+    .wp-general-buttons a:hover{
+      color: white;
+    }
+
+    .wp-general-buttons a:hover span{
+      border-color: white;
+    }
+
+    .wp-short-video-detail .swiper-slide:hover .short-video-detail-image::before,
+    .wp-short-video-detail .swiper-slide:hover .short-video-detail-image::after{
+      opacity: 1;
+    }
+
+    .wp-short-video-nav span{
+      font-size: 22px;
+      padding: 0 2px;
+      margin: 0 8px;
+    }
+
+    .wp-see-all-short-video{
+      height: 40px;
+    }
+
+    #more-short-video{
+      width: 33px;
+      height: 33px;
+    }
+
+    .series-related-video-nav,
+    .movie-related-video-nav{
+      cursor: default;
+      font-size: 20px;
+    }
+
+    .series-related-video-nav span,
+    .movie-related-video-nav span{
+      padding: 0 2px;
+      margin: 0 8px;
+      color: #999;
+      transition: 0.1s ease;
+      -webkit-transition: 0.1s ease;
+      -moz-transition: 0.1s ease;
+      -ms-transition: 0.1s ease;
+      -o-transition: 0.1s ease;
+    }
+
+    .wp-general-container{
+      padding: 5px 0 0;
+      min-height: calc(100vh - 306px);
+    }
+
+    .wp-general-container.wp-movie-container{
+      min-height: calc(100vh - 187px);
+    }
+
+    .wp-general-details-container{
+      width: 1068px;
+      margin: 15px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    .wp-detail-container{
+      width: 138px;
+      height: auto;
+      padding: 9px 9px 7px 9px;
+      margin: 10px 20px 20px;
+      background-color: #262b36;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    .wp-general-detail-image{
+      width: 120px;
+      height: 150px;
+    }
+
+    .wp-general-buttons{
+      width: 7em;
+      transform: translateY(45px);
+    }
+
+    .series-related-image,
+    .movie-related-image{
+      width: 100%;
+      height: 8.75em;
+    }
+
+    .short-video-related-image{
+      width: 100%;
+      height: 6em;
+    }
+
+    .wp-short-video-detail-image{
+      width: 120px;
+      height: 105px;
+    }
+
+    #category-arrow{
+      width: 25%;
+      padding: 0 0 10px 1%;
+    }
+
+    .category-error-container{
+      width: 380px;
+    }
+
+    #category-error-message{
+      font-size: 20px;
+    }
+  }

@@ -1,0 +1,302 @@
+/* movie_detail.php */
+.ky-movie-stream-header{
+  width: 100vw;
+  height: 40px;
+  position: relative;
+}
+.ky-movie-stream-header a{
+  text-decoration: none;
+}
+.ky-movie-stream-header img{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 20px;
+  padding: 5px;
+}
+#ky-video-back{
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  padding: 5px;
+  transform: translate(-50%, -50%);
+  color: #e6e6e6;
+}
+.ky-movie-stream, .ky-movie-stream-info-container, .ky-movie-tabs, .ky-series-tabs, .ky-short-video-tabs {
+  width: 100vw;
+  position: relative;
+}
+.ky-movie-stream {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ky-movie-stream iframe, .ky-trailer-content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ky-movie-stream-info-container {
+  height: auto;
+  padding: 3% 3% 25px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+.ky-movie-stream-info-container > span:first-child {
+  float: right;
+}
+.ky-movie-stream-info-container > span:first-child i {
+  margin-right: 3px;
+}
+.ky-movie-stream-info-container > span:nth-child(2) {
+  display: block;
+  margin-bottom: 8px;
+}
+.ky-movie-tabs ul, .ky-series-tabs ul, .ky-short-video-tabs ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.ky-movie-tabs ul > li, .ky-series-tabs ul > li, .ky-short-video-tabs ul > li {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  line-height: 20px;
+  height: 100%;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ky-movie-tabs ul > li.selected, .ky-series-tabs ul > li.selected, .ky-short-video-tabs ul > li.selected {
+  background-color: #262b36;
+  color: #00ced1;
+}
+.ky-movie-tabs-content, .ky-series-tabs-content, .ky-short-video-tabs-content {
+  width: 100vw;
+  position: relative;
+  background-color: #262b36;
+  padding: 3%;
+  box-sizing: border-box;
+}
+.ky-movie-tabs-content .ky-synopsis-content, .ky-series-tabs-content .ky-synopsis-content, .ky-short-video-tabs-content .ky-synopsis-content {
+  font-size: 13px;
+  line-height: 23px;
+  color: #e6e6e6;
+}
+.ky-movie-tabs-content .ky-trailer-content, .ky-series-tabs-content .ky-trailer-content{
+  position: relative;
+  width: 100%;
+  height: 260px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.ky-viewer {
+  position: relative;
+  top: 5px;
+  font-size: 12px;
+}
+.ky-label {
+  width: 70%;
+  font-size: 18px;
+  line-height: 25px;
+}
+.ky-release-year{
+  font-size: 13px;
+  color: #c1c1c1;
+}
+
+.ky-download-button{
+  position: relative;
+  float: right;
+}
+
+.ky-download-button a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  letter-spacing: 0.3px;
+  background-color: #262b36;
+}
+
+.ky-download-button a:hover{
+  color: #00ced1;
+}
+
+.ky-download-button a i{
+  margin-right: 3px;
+}
+/* movie_detail */
+
+/* series_detail */
+.ky-series-tabs .ky-episodes-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.ky-episodes-content a {
+  text-decoration: none;
+  color: #3498db;
+  outline: none;
+  border-bottom: 1px dotted #3498db;
+}
+.ky-episodes-content > span {
+  width: 23.5%;
+  font-size: 12px;
+  text-align: center;
+  padding: 6px 0;
+  margin: 5px 0px;
+  cursor: pointer;
+  transition: 0.1s ease;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -ms-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+}
+/*.ky-episodes-content > span:hover a {
+  color: rgba(255,255,255,1);
+}*/
+.ky-episodes-content > span a:active {
+  color: #00ced1;
+}
+.ky-episodes-content > span a:active + span {
+  background-color: #00ced1;
+}
+.ky-series-tabs ul > li {
+  width: 33.3333%;
+}
+.ky-indicate-episode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ky-indicate-episode div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ky-indicate-episode-name {
+  color: #ddd;
+  width: 100%;
+  font-size: 17px;
+  text-shadow: 2px 2px #d7111187;
+  position: relative;
+  bottom: 20px;
+}
+.ky-indicate-episode-label {
+  color: #ddd;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  width: 100%;
+  position: absolute;
+  left: 14%;
+  top: 59%;
+  transform: translate(-15%, -50%);
+}
+.ky-indicate-episode svg {
+  position: absolute;
+  left: 10%;
+  top: 75%;
+  transform: translate(-15%, -50%);
+}
+.ky-indicate-episode svg path:nth-child(1) {
+  fill: transparent;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  stroke-width: 3px;
+  animation: animate 2s forwards;
+}
+.ky-indicate-episode svg path:nth-child(2) {
+  fill: transparent;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  stroke-width: 3px;
+  animation: animate 2s forwards;
+}
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/* series_detail */
+
+/* short_video_detail */
+.ky-short-video-tabs ul > li {
+  width: 100%;
+}
+.ky-short-video-tabs ul {
+  border-bottom: 1px solid #181a20;
+}
+/* short_video_detail */
+/* for Loading icon */
+.triple-spinner {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #FF5722;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+.triple-spinner::before,
+.triple-spinner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid transparent;
+}
+.triple-spinner::before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-top-color: #FF9800;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3.5s linear infinite;
+}
+.triple-spinner::after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #FFC107;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.75s linear infinite;
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* end of loading icon */
